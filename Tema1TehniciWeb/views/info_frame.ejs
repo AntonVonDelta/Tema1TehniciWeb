@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style/info_page_style.css">
+
+    <!--JS scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="javascript/info_functions.js"></script>
+</head>
+
+<body>
+    <center>
+        <form>
+            <input type="hidden" id="row_count_data" value="0"/>
+
+            <input type='hidden' id='page' value='info' />
+            <table border="1">
+                <tr id="header">
+                    <th>Link Pricipal</th>
+                    <th>Linkuri Secundare</th>
+                    <th style="padding: 10px 0;width:1%">Action</th>
+                </tr>
+
+                <%
+                var i=0;
+                for(link of page.data.data_ads){
+                    var multiple=link.multiple;
+                %>
+
+                <tr class='data'>
+                    <input type="hidden" class="editing" value="false" />
+
+                    <%
+                    for(dest of link.dest){
+                    i++;
+                    var title=dest.title;
+
+                    if(dest.rang=="P"){
+                    %>
+                    <td class="principal_row">
+                        <div>
+                            <input type='text' class='princ_link_title' value='<%-title%>' />
+                        </div>
+                        <div>
+                            <input type='checkbox' class='checkbox_multiple'  <%- multiple==false?"checked":"" %>  />Redirectioneaza catre(
+                            <input type='radio' name="radio_<%-i%>" class='checkbox_url'  <%-  !multiple && dest.type=="Link"?"checked":"" %> value='Url' />Url sau
+                            <input type='radio' name="radio_<%-i%>" class='checkbox_page' <%-  !multiple && dest.type=="Page"?"checked":"" %>  value='Page' />Page )
+                        </div>
+                        <div>
+                            <input type='text' class='princ_link_addr' value='<%-dest.resource%>' />
+                        </div>
+                    </td>
+                    <%
+                    break;
+                    }
+
+                    }
+
+                    %>
+                    <td style='vertical-align:bottom' class="secondary_row">
+                        <%
+                        for (dest of link.dest) {
+                        i++;
+                        title=dest.title;
+
+                        if(dest.rang=="S"){
+                        %>
+
+                        <div class="secondary" style='margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid grey'>
+                            <div>
+                                <input type='text' class='sec_link_title' value='<%-title%>' />
+                            </div>
+                            <div>
+                                <input type='radio' name="radio_<%-i%>" class='checkbox_url'  <%-  dest.type=="Link"?"checked":"" %> value='Url' />Url sau
+                                <input type='radio' name="radio_<%-i%>" class='checkbox_page'  <%-  dest.type=="Page"?"checked":"" %> value='Page' />Page
+                            </div>
+                            <div>
+                                <input type='text' class='sec_link_addr' value='<%- dest.resource%>' />
+                            </div>
+                        </div>
+                        <%
+                        }
+                        }
+                        //Extra data-box
+                        %>
+                        <!--<div class="secondary" style='margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid grey'>
+                            <div>
+                                <input type='text' class='sec_link_title' value='' />
+                            </div>
+                            <div>
+                                <input type='radio' class='checkbox_url' value='Url' />Url sau
+                                <input type='radio' class='checkbox_page' value='Page' />Page
+                            </div>
+                            <div>
+                                <input type='text' class='sec_link_addr' value='' />
+                            </div>
+                        </div>-->
+
+                        <div class='NewLink'><h4 style='margin:0 auto;'>New Link</h4></div>
+                    </td>
+                    <td>
+                        <button type='button' class='btn_edit jq_btn_edit'>Edit</button>
+                        <button type='button' class='btn_delete jq_btn_delete'>Delete</button>
+                    </td>
+
+                </tr>
+
+                    <%
+
+                    }
+                    %>
+
+
+                <tr class="NewEntry">
+                    <td colspan="3">
+                        <center><h3 style="margin:0 auto">New Entry</h3></center>
+                    </td>
+                </tr>
+                <tr class="footer">
+                    <td colspan="3" style="background: linear-gradient(#F3F3F3 80%,#B7B7B7)">
+                        <button type='button' id="btn_save" class='btn_edit' style='display:inline-block;'>Save</button>
+                        <button type='button' id="btn_delete_all" class='btn_delete' style='display:inline-block;'>Delete All</button>
+                        <div id="jq_notify" style="color:red;display:none;font-weight: bold">*You must save changes</div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+
+    <!--Stored data-->
+    <input type='hidden' id='row_count_data' value='<%- page.data.data_ads.length  %>' />
+</body>
+
+
+</html>

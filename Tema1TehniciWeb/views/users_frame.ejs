@@ -1,0 +1,79 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>User Editor</title>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style/users_frame.css">
+
+    <!--JS scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+
+    <script src="javascript/users_frame_javascript.js"></script>
+
+    <!--Fonts-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Gruppo" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Michroma">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
+</head>
+
+<body>
+    <div class="parent">
+        <ul class="users_list">
+            <% for(registered_user of page.users){
+            %>
+            <li class="user" data-name="<%-registered_user.name%>">
+                <div class="line">
+                    <img class="avatar_img" src="images/img_avatar5.png" />
+                    <span class="user_name"><%- registered_user.name%></span>
+                    
+                    <div class="controls">
+                        <span class="btn_control control_chat" onclick="window.open('/mesaje?user=<%-registered_user.name%>');">Chat</span>
+                        <% if(user.security.admin){%>
+                        <span class="btn_control control_reset">Reset Password</span>
+                        <span class="btn_control warning control_block"><%- (registered_user.blocked)?"Unblock":"Block"%></span>
+                        <span class="btn_control warning control_delete">Delete</span>
+                        <%}%>
+                    </div>
+                    
+                </div>
+                <% if(user.security.admin){%>
+                <div class="edit_user">
+                    <input type="text" class="new_password" />
+                    <span class="btn_control warning control_submit_password">Reset</span>
+                </div>
+                <%}%>
+            </li>
+            <%}%>
+        </ul>
+        <% if(user.security.admin){%>
+        <div class="add_user_wrapper">
+            <div class="upper_side">
+                <div class="controls">
+                    <span class="btn_control control_new_user">Add new user</span>
+                </div>
+            </div>
+
+            <div class="edit_new_user">
+                <input type="text" class="new_user_name" />
+            </div>
+        </div>
+        <%}%>
+    </div>
+
+
+</body>
+</html>

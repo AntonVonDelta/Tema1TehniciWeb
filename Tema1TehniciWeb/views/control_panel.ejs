@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logged | <%- page.user_name %></title>
+
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="style/admin_page_style.css" />
+
+    <!--JS scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="javascript/login_functions.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="hor_nav_bar">
+            <center>
+                <% if(user.security.admin){%>
+                <a class="page" id="announc_frame" onclick="navigateTo('announc_frame')">Anunturi</a>
+                <a class="page" id="info_frame" onclick="navigateTo('info_frame')">Linkuri</a>
+                <%}%>
+                <a class="page" id="users_frame" onclick="navigateTo('users_frame')">Utilizatori</a>
+
+                <a class="page" id="profile_frame" style='box-shadow: 0 4px 2px -2px #732424;' onclick="navigateTo('profile_frame')">Profil</a>
+                <a class="page" id="mesaje" onclick="window.open('mesaje');">Chat</a>
+            </center>
+        </div>
+    </div>
+
+    <div id="page">
+        <iframe id="page_content" width="100%" height="100%" src="profile_frame"></iframe>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incorrect Login</title>
+
+    <!--Favicon-->
+    <link rel="icon" href="images/favicon.ico" />
+
+    <!--Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="style/error_page_style.css" />
+
+    <!-- Java Script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <table id="wrapper">
+        <tr>
+            <td class="word_search">
+                <ul>
+                    <li>x</li>
+                    <li>o</li>
+                    <li>z</li>
+                    <li>s</li>
+                    <li>w</li>
+                    <li>s</li>
+                    <li>k</li>
+                    <li>u</li>
+                    <li>z</li>
+                    <li>s</li>
+                    <li>c</li>
+                    <li>a</li>
+                    <li id="char_set_1" class="char">4</li>
+                    <li id="char_set_2" class="char">0</li>
+                    <li id="char_set_3" class="char">4</li>
+                    <li>s</li>
+                    <li>e</li>
+                    <li>r</li>
+                    <li>g</li>
+                    <li>i</li>
+                    <li>u</li>
+                    <li>u</li>
+                    <li>c</li>
+                    <li>i</li>
+                    <li>q</li>
+                    <li>y</li>
+                    <li id="char_set_4" class="char">w</li>
+                    <li id="char_set_5" class="char">r</li>
+                    <li id="char_set_6" class="char">r</li>
+                    <li id="char_set_7" class="char">o</li>
+                    <li id="char_set_8" class="char">n</li>
+                    <li id="char_set_9" class="char">g</li>
+                    <li>y</li>
+                    <li id="char_set_10" class="char">d</li>
+                    <li id="char_set_11" class="char">a</li>
+                    <li id="char_set_12" class="char">t</li>
+                    <li id="char_set_13" class="char">a</li>
+                    <li>b</li>
+                    <li>o</li>
+                    <li>g</li>
+                    <li>d</li>
+                    <li>a</li>
+                    <li>n</li>
+                    <li>t</li>
+                    <li>f</li>
+                    <li>m</li>
+                    <li>a</li>
+                    <li>c</li>
+                    <li>u</li>
+                    <li>f</li>
+                    <li>o</li>
+                    <li>u</li>
+                    <li>n</li>
+                    <li>d</li>
+                    <li>z</li>
+                    <li>o</li>
+                    <li>v</li>
+                    <li>s</li>
+                    <li>e</li>
+                    <li>e</li>
+                    <li>c</li>
+                    <li>y</li>
+                    <li>v</li>
+                    <li>a</li>
+                </ul>
+            </td>
+
+            <td class="error_description" style="left:20px">
+                <p class="constr_title">We are sorry , but seems the page encountered a major problem</p>
+
+                <p>The provided user name and password or token were rejected by the server.</p>
+
+                <p>You can try the followings</p>
+
+                <ul>
+                    <li> Return to the home page</li>
+                    <li>Notice the admin about an error</li>
+                    <li>Ask the admin for your password</li>
+                </ul>
+
+                <form id="user_panel_wnd" action="login.php" method="post">
+                    <input type="text" id="usr" class="text_user" placeholder="Username" name="usr_name" autocomplete="off">
+                    <input type="password" id="psw" class="text_user" placeholder="Password" name="usr_pass" autocomplete="off">
+                    <button type="submit" style="margin-top:10px;width:20%"> Log in</button>
+                    <button type="button" style="margin-top: 0px;width:70%" onclick="window.location.href='index.php'"> Go back home</button>
+                </form>
+            </td>
+
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+				var count_char_set = 0 ;
+
+				var timer_clock = setInterval(time_fct ,400);
+
+				function time_fct() {
+						count_char_set += 1;
+
+							$("#char_set_" + count_char_set).css("background-color" , "rgba(26,188,156,0.7)");
+
+
+
+						if(count_char_set > 12)
+						{
+							clearInterval(timer_clock);
+						}
+				}
+
+    </script>
+
+</body>
+</html>

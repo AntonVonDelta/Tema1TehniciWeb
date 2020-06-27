@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style/announc_page_style.css">
+
+    <!--JS scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="javascript/announc_functions.js"></script>
+</head>
+
+<body>
+    <!--Here is stored an array of images from /images folder
+        It is used by jquery when creating new row-->
+    <select id="img_Data" style="display:none">
+        <%
+        for(img of page.data.images){
+        %>
+        <option value='<%- img %>'><%- img %></option>
+        <%
+        }
+        %>
+    </select>
+    <center>
+        <form>
+            <input type='hidden' id='page' value='announces' />
+            <table border="1">
+                <tr id="header">
+                    <th>Text</th>
+                    <th>Extra Info</th>
+                    <th style="padding: 10px 0;width:2%">Picture</th>
+                    <th style="padding: 10px 0;width:1%">Action</th>
+                </tr>
+                <% for(value of page.data.data_avizier){
+                %>
+                <tr class='data'>
+                    <td><textarea readonly class='data_text'><%-value.text%></textarea></td>
+                    <td style='vertical-align:top;padding-bottom:0'>
+                        <div style='height:50px'>
+                            <textarea readonly class='extra_info' placeholder='Enter extra information or a website address here'><%- value.extra?value.link:"" %></textarea>
+                        </div>
+                    </td>
+                    <td>
+                        <img title='<%- value.picture%>' src='images/<%- value.picture%>' />
+                        <select class='data_picture' disabled>
+                            <%
+                            for(img of page.data.images){
+                            %>
+                            <option <%- value.picture==img?"selected":""  %> value='<%- img %>'><%- img %></option>
+                            <%
+                            }
+                            %>
+                        </select>
+                    </td>
+                    <td>
+                        <button type='button' class='btn_edit jq_btn_edit'>Edit</button>
+                        <button type='button' class='btn_delete jq_btn_delete'>Delete</button>
+                    </td>
+                </tr>
+                <%
+                }
+                %>
+
+                <tr id="NewEntry">
+                    <td colspan="4">
+                        <center><h3 style="margin:0 auto">New Entry</h3></center>
+                    </td>
+                </tr>
+                <tr id="Controls">
+                    <td colspan="4" style="background: linear-gradient(#F3F3F3 80%,#B7B7B7)">
+                        <button type='button' id="btn_save" class='btn_edit' style='display:inline-block;'>Save</button>
+                        <button type='button' id="btn_delete_all" class='btn_delete' style='display:inline-block;'>Delete All</button>
+                        <div id="jq_notify" style="color:red;display:none;font-weight: bold">*You must save changes</div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+
+
+</html>

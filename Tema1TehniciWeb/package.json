@@ -1,0 +1,23 @@
+{
+  "name": "tema1-tehnici-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "description": "Tema1TehniciWeb",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.0",
+    "crypto-js": "^4.0.0",
+    "debug": "^2.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.14.0",
+    "express-session": "^1.17.1",
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0"
+  }
+}

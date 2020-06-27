@@ -1,0 +1,139 @@
+body , html
+{
+	position:relative;
+	margin:0;
+	padding:0;
+
+	width:100%;
+	height:100%;
+
+	background-color:#312A27;
+}
+
+
+#wrapper
+{
+	position:relative;
+	font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color:rgba(255,255,255,0.7);
+
+    margin:0 auto;
+    border-collapse: collapse;
+	top:110px;
+}
+
+
+.word_search
+{
+	position:relative;
+
+	width:500px;
+	height:500px;
+
+}
+.error_description
+{
+	position:relative;
+
+	width:500px;
+	height:500px;
+	    top: -20px;
+}
+.word_search ul li
+{
+	position:relative;
+	background-color: rgba(0,0,0,.2);
+	width:50px;
+	height:50px;
+
+	line-height: 51px;
+	list-style: none;
+	margin-right: 0.5%;
+	text-transform: uppercase;
+	overflow: hidden;
+	text-align: center;
+
+	display: inline-block;
+}
+.word_search ul li:hover
+{
+	background-color: rgba(0,0,0,.4);
+}
+
+.char
+{
+	opacity: 1;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.error_description ul li
+{
+	position:relative;
+
+    color:rgba(255,255,255,0.7);
+	font-size:18px;
+
+	margin-right: 0.5%;
+}
+
+.constr_title
+{
+	position: relative;
+	color: white;
+	font-size: 28px;
+}
+
+
+
+.text_user
+{
+	position:relative;
+
+		font-family: 'Ubuntu', sans-serif;
+	    font-size: 12px;
+	    font-style: normal;
+
+	    background-color: rgba(0,0,0,.2);
+
+	    outline:none;
+	    border:none;
+
+	    margin-top: 10px;
+
+	width: 88%;
+    height: 41px;
+
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+
+    padding-left:14px;
+
+	display: block;
+}
+
+
+.error_description form button
+{
+	    background-color: rgba(245, 90, 0, 0.75);
+	    height: 41px;
+
+	    border: none;
+	    outline: none;
+
+	    color: white;
+}
+.error_description form button:hover
+{
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.5);
+}
+
+::selection {
+    background-color: rgba(0,0,0,0.2);
+}

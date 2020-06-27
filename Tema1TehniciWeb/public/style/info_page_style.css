@@ -1,0 +1,121 @@
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	background-color: white;
+	margin:0;
+}
+table{
+    margin-top: 45px;
+    border-collapse: collapse;
+    width: 100%;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    text-align: center;
+
+    border:1px solid rgba(128, 128, 128, 0.15);
+}
+#header{
+	background: rgb(84, 46, 40);
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 100;
+
+}
+input[type=text]{
+	width:80%;
+}
+/*New Elements*/
+.NewEntry{
+	background: #11172D;
+    height: 13px;
+    cursor:pointer;
+}
+.NewEntry>td:hover{
+	color:black;
+}
+.NewEntry>td{
+	color:white;
+}
+.NewLink{
+	background: #243FA2;
+    height: 13px;
+    cursor:pointer;	
+    padding:6px;
+    margin:6px -8px 0;
+    color:white;
+}
+.NewLink:hover{
+	background-color: #3459E2;
+	color:black;
+}
+/*End new elements*/
+.data{
+	background-color:white;
+}
+.data:hover
+{
+	background-color: rgba(218, 218, 218, 0.38);
+	border: 1px solid rgba(109, 50, 50, 0.25);
+}
+th{
+	padding:15px 100px;
+	color: white;
+    font-weight: 100;
+}
+td{
+	padding:8px 8px 0;
+	color:gray;
+    border: 2px solid #6B6E77;
+}
+td:hover{
+	background-color: #EAEAF2;
+}
+button{
+	text-decoration: none;
+	outline:none;
+}
+.btn_delete{
+    border: 0;
+
+    padding: 5px 10px;
+    display: block;
+    margin: 5px auto;
+    width:88px;
+
+    background-color: rgb(210, 75, 53);
+    color: white;
+}
+
+/*Buttons*/
+.btn_edit{
+	margin: 0 auto;
+    border: 0;
+
+    padding: 5px 10px;
+    display: block;
+    width: 88px;
+
+    background-color: #6F6152;
+    color: white;
+}
+.btn_edit:hover,.btn_delete:hover{
+	cursor:pointer;
+}
+.btn_edit:active,.btn_delete:active{
+	box-shadow: inset 0 0 7px 2px black;
+}
+
+/*End Of Buttons*/
+::-webkit-scrollbar {
+    width: 0px;
+}
+ 
+::-webkit-scrollbar-track {
+
+}
+ 
+::-webkit-scrollbar-thumb {
+
+}

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Tema1TehniciWeb</Name>
+    <RootNamespace>Tema1TehniciWeb</RootNamespace>
+    <Environment>DEBUG=Homework</Environment>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3ff2d657-4287-4b01-8681-cb2082cb3cb5</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="public\error.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\images\1407729822639.png" />
+    <Content Include="public\images\album_foto_actual\Amfiteatru-1.jpg" />
+    <Content Include="public\images\album_foto_actual\Amfiteatru-10.jpg" />
+    <Content Include="public\images\album_foto_actual\Amfiteatru-4.jpg" />
+    <Content Include="public\images\album_foto_actual\Anexa laborator-01.jpg" />
+    <Content Include="public\images\album_foto_actual\Anexa laborator-02.jpg" />
+    <Content Include="public\images\album_foto_actual\Anexa laborator-04.jpg" />
+    <Content Include="public\images\album_foto_actual\Cab. lb.romana-01.jpg" />
+    <Content Include="public\images\album_foto_actual\Cab. lb.romana-02.jpg" />
+    <Content Include="public\images\album_foto_actual\Cab.istorie01.jpg" />
+    <Content Include="public\images\album_foto_actual\Cab.istorie02.jpg" />
+    <Content Include="public\images\album_foto_actual\Cab.istorie03.jpg" />
+    <Content Include="public\images\album_foto_actual\Capela-02.jpg" />
+    <Content Include="public\images\album_foto_actual\Capela-03.jpg" />
+    <Content Include="public\images\album_foto_actual\Capela-05.jpg" />
+    <Content Include="public\images\album_foto_actual\Capela-06.jpg" />
+    <Content Include="public\images\album_foto_actual\CEAC-01.jpg" />
+    <Content Include="public\images\album_foto_actual\CEAC-02.jpg" />
+    <Content Include="public\images\album_foto_actual\CEAC-03.jpg" />
+    <Content Include="public\images\album_foto_actual\Geografie -1.jpg" />
+    <Content Include="public\images\album_foto_actual\Geografie -2.jpg" />
+    <Content Include="public\images\album_foto_actual\Geografie -3.jpg" />
+    <Content Include="public\images\album_foto_actual\Geografie -4.jpg" />
+    <Content Include="public\images\album_foto_actual\Info I -16.jpg" />
+    <Content Include="public\images\album_foto_actual\Info I -4.jpg" />
+    <Content Include="public\images\album_foto_actual\Info I -5.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.biologie-01.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.biologie-03.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.biologie-06.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.fizica-04.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.fizica-05.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.fizica-09.jpg" />
+    <Content Include="public\images\album_foto_actual\Lab.fizica-12.jpg" />
+    <Content Include="public\images\album_olimpici\img1.jpg" />
+    <Content Include="public\images\album_olimpici\img10.jpg" />
+    <Content Include="public\images\album_olimpici\img11.jpg" />
+    <Content Include="public\images\album_olimpici\img12.jpg" />
+    <Content Include="public\images\album_olimpici\img13.jpg" />
+    <Content Include="public\images\album_olimpici\img14.jpg" />
+    <Content Include="public\images\album_olimpici\img15.jpg" />
+    <Content Include="public\images\album_olimpici\img16.jpg" />
+    <Content Include="public\images\album_olimpici\img17.jpg" />
+    <Content Include="public\images\album_olimpici\img18.jpg" />
+    <Content Include="public\images\album_olimpici\img19.jpg" />
+    <Content Include="public\images\album_olimpici\img2.jpg" />
+    <Content Include="public\images\album_olimpici\img20.jpg" />
+    <Content Include="public\images\album_olimpici\img21.jpg" />
+    <Content Include="public\images\album_olimpici\img22.jpg" />
+    <Content Include="public\images\album_olimpici\img23.jpg" />
+    <Content Include="public\images\album_olimpici\img24.jpg" />
+    <Content Include="public\images\album_olimpici\img25.jpg" />
+    <Content Include="public\images\album_olimpici\img26.jpg" />
+    <Content Include="public\images\album_olimpici\img27.jpg" />
+    <Content Include="public\images\album_olimpici\img28.jpg" />
+    <Content Include="public\images\album_olimpici\img29.jpg" />
+    <Content Include="public\images\album_olimpici\img3.jpg" />
+    <Content Include="public\images\album_olimpici\img30.jpg" />
+    <Content Include="public\images\album_olimpici\img31.jpg" />
+    <Content Include="public\images\album_olimpici\img32.jpg" />
+    <Content Include="public\images\album_olimpici\img4.jpg" />
+    <Content Include="public\images\album_olimpici\img5.jpg" />
+    <Content Include="public\images\album_olimpici\img6.jpg" />
+    <Content Include="public\images\album_olimpici\img7.jpg" />
+    <Content Include="public\images\album_olimpici\img8.jpg" />
+    <Content Include="public\images\album_olimpici\img9.jpg" />
+    <Content Include="public\images\bit-corp.png" />
+    <Content Include="public\images\calendar.png" />
+    <Content Include="public\images\check_jn.png" />
+    <Content Include="public\images\circle.png" />
+    <Content Include="public\images\dinisurface.png" />
+    <Content Include="public\images\ecdl_logo.png" />
+    <Content Include="public\images\favicon.ico" />
+    <Content Include="public\images\ghilimele-gri.png" />
+    <Content Include="public\images\guard.png" />
+    <Content Include="public\images\home.png" />
+    <Content Include="public\images\images.jpg" />
+    <Content Include="public\images\images19.jpg" />
+    <Content Include="public\images\interface.png" />
+    <Content Include="public\images\interface_black.png" />
+    <Content Include="public\images\internet.png" />
+    <Content Include="public\images\Janitor.png" />
+    <Content Include="public\images\line-graph-dribbbble.gif" />
+    <Content Include="public\images\logo_simple.gif" />
+    <Content Include="public\images\math_s.gif" />
+    <Content Include="public\images\next.png" />
+    <Content Include="public\images\paper.png" />
+    <Content Include="public\images\prev.png" />
+    <Content Include="public\images\search-icon.png" />
+    <Content Include="public\images\slide_dir\COLEGIUL-SPIRU-HARET_PAG-1.jpg" />
+    <Content Include="public\images\slide_dir\download.jpg" />
+    <Content Include="public\images\slide_dir\spiru-haret.jpg" />
+    <Content Include="public\images\slide_dir\tulcea-colegiul-dobrogean-spiru-haret-foto-neptunu_60e2402fe8d8ca.jpg" />
+    <Content Include="public\images\social.gif" />
+    <Content Include="public\images\social.PNG" />
+    <Content Include="public\images\spiruharet.gif" />
+    <Content Include="public\images\spiru_logo.jpg" />
+    <Content Include="public\images\spiru_logo_tr.gif" />
+    <Content Include="public\images\torch-with-fire_318-60834.png" />
+    <Content Include="public\images\trash.png" />
+    <Content Include="public\images\univ_hat.png" />
+    <Content Include="public\images\_home.png" />
+    <Content Include="public\index1.html" />
+    <Content Include="public\javascript\announc_functions.js" />
+    <Content Include="public\javascript\index_functions.js" />
+    <Content Include="public\javascript\info_functions.js" />
+    <Content Include="public\javascript\login_functions.js" />
+    <Content Include="public\javascript\mesaje_javascript.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascript\profile_frame_javascript.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascript\smoothscroll.js" />
+    <Content Include="public\javascript\users_frame_javascript.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\pages\admitere.html" />
+    <Content Include="public\pages\album_foto_actual.php" />
+    <Content Include="public\pages\album_olimpici.php" />
+    <Content Include="public\pages\antreprenor.html" />
+    <Content Include="public\pages\aspiratii_literale.html" />
+    <Content Include="public\pages\comisie_ed.html" />
+    <Content Include="public\pages\comisie_mate.html" />
+    <Content Include="public\pages\cuprins.html" />
+    <Content Include="public\pages\declaratii_avere.html" />
+    <Content Include="public\pages\fotografii.html" />
+    <Content Include="public\pages\gazeta_mate.html" />
+    <Content Include="public\pages\gm1.html" />
+    <Content Include="public\pages\index_data.html" />
+    <Content Include="public\pages\istoric.html" />
+    <Content Include="public\pages\legislatie.html" />
+    <Content Include="public\pages\management.html" />
+    <Content Include="public\pages\olimpiade.html" />
+    <Content Include="public\pages\panaitopol.html" />
+    <Content Include="public\pages\pdf\activpractice.pdf" />
+    <Content Include="public\pages\pdf\anunt.jpg" />
+    <Content Include="public\pages\pdf\anuntc5.pdf" />
+    <Content Include="public\pages\pdf\Anuntfe.pdf" />
+    <Content Include="public\pages\pdf\anuntingr.pdf" />
+    <Content Include="public\pages\pdf\anuntpaznic.pdf" />
+    <Content Include="public\pages\pdf\Anuntpublicitariulie.pdf" />
+    <Content Include="public\pages\pdf\bpanaitopol2016.pdf" />
+    <Content Include="public\pages\pdf\bugetisj.pdf" />
+    <Content Include="public\pages\pdf\bugetlocal.pdf" />
+    <Content Include="public\pages\pdf\bugetpropriu.pdf" />
+    <Content Include="public\pages\pdf\calendarconcurs.pdf" />
+    <Content Include="public\pages\pdf\campanie.pdf" />
+    <Content Include="public\pages\pdf\certifeuro.pdf" />
+    <Content Include="public\pages\pdf\clasa11.pdf" />
+    <Content Include="public\pages\pdf\clasa5.pdf" />
+    <Content Include="public\pages\pdf\clasa9.pdf" />
+    <Content Include="public\pages\pdf\codetica.pdf" />
+    <Content Include="public\pages\pdf\colajsept.pdf" />
+    <Content Include="public\pages\pdf\comunicatbr.pdf" />
+    <Content Include="public\pages\pdf\comunicatdb.pdf" />
+    <Content Include="public\pages\pdf\ecdiofantice.pdf" />
+    <Content Include="public\pages\pdf\ecexponeniale.pdf" />
+    <Content Include="public\pages\pdf\hotaririca.pdf" />
+    <Content Include="public\pages\pdf\inductia.pdf" />
+    <Content Include="public\pages\pdf\inecexpsilog.pdf" />
+    <Content Include="public\pages\pdf\invinchidere.pdf" />
+    <Content Include="public\pages\pdf\invitatieseminar.pdf" />
+    <Content Include="public\pages\pdf\pretransfer.pdf" />
+    <Content Include="public\pages\pdf\problemepropuse.pdf" />
+    <Content Include="public\pages\pdf\probnumarare.pdf" />
+    <Content Include="public\pages\pdf\rezultate11.pdf" />
+    <Content Include="public\pages\pdf\rezultate12.pdf" />
+    <Content Include="public\pages\pdf\rezultate2016.pdf" />
+    <Content Include="public\pages\pdf\roi.pdf" />
+    <Content Include="public\pages\pdf\snylpnw_M.pdf" />
+    <Content Include="public\pages\pdf\spanaitopol2016.pdf" />
+    <Content Include="public\pages\pdf\sume.pdf" />
+    <Content Include="public\pages\pdf\testimonaleaugust.pdf" />
+    <Content Include="public\pages\pdf\testimonialdec.pdf" />
+    <Content Include="public\pages\pdf\testimonialnov.pdf" />
+    <Content Include="public\pages\pdf\testimonialoct.pdf" />
+    <Content Include="public\pages\pdf\testimonsept.pdf" />
+    <Content Include="public\pages\pdf\test_de_evaluare_initiala_clasa_a_xa20142015.pdf" />
+    <Content Include="public\pages\pdf\test_de_evaluare_initiala_clasa_a_xia20142015.pdf" />
+    <Content Include="public\pages\pdf\test_de_evaluare_initiala_clasa_a_xiia20142015.pdf" />
+    <Content Include="public\pages\pdf\Tranzitia.pdf" />
+    <Content Include="public\pages\proiecte.html" />
+    <Content Include="public\pages\sport\sport.html" />
+    <Content Include="public\style\admin_page_style.css" />
+    <Content Include="public\style\announc_page_style.css" />
+    <Content Include="public\style\error_page_style.css" />
+    <Content Include="public\style\info_page_style.css" />
+    <Content Include="public\style\mesaje.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\style\profile_frame.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\style\users_frame.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\style\_index_style.css" />
+    <Content Include="public\style\_index_style_mobile.css" />
+    <Content Include="public\style\_index_style_mobile_inline.css" />
+    <Content Include="public\style\_menu_style.css" />
+    <Content Include="public\style\_page_style.css" />
+    <Content Include="public\style\_sport_style.css" />
+    <Content Include="routes\announc_frame.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\control_panel.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\index.js" />
+    <Content Include="package.json" />
+    <Content Include="routes\info_frame.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\login.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\mesaje.js" />
+    <Content Include="routes\message_handler.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\profile_frame.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\save_json.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\update_users.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\users_frame.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tools.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\announc_frame.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\control_panel.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\index.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\info_frame.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\mesaje.ejs" />
+    <Content Include="views\profile_frame.ejs">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\users_frame.ejs">
+      <SubType>Code</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\album_foto_actual\" />
+    <Folder Include="public\images\album_olimpici\" />
+    <Folder Include="public\images\slide_dir\" />
+    <Folder Include="public\javascript\" />
+    <Folder Include="public\pages\" />
+    <Folder Include="public\pages\pdf\" />
+    <Folder Include="public\pages\sport\" />
+    <Folder Include="public\style\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

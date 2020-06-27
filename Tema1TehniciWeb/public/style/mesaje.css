@@ -1,0 +1,142 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.parent {
+    margin: 0 100px 0;
+}
+
+@media only screen and (max-width: 892px) {
+    .parent {
+        margin: 0 0 0;
+    }
+}
+
+
+.emoticon_img{
+    width:26px;
+    vertical-align:center;
+}
+
+.message_list {
+    padding: 0;
+}
+
+.message_list li {
+    list-style: none;
+    content: "";
+    display: table;
+    clear: both;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0px gray;
+    margin: 18px 0;
+}
+
+.message_list li:hover {
+    background-color: aliceblue;
+}
+
+
+.line {
+    min-height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-family: "Raleway";
+    letter-spacing: 2px;
+    font-size: 21px;
+}
+
+.message .message_header {
+    margin: 10px 10px 0;
+    align-self: center;
+    display:flex;
+}
+.message .message_header .message_title {
+    align-self:center;
+}
+.message .message_header .message_emoticon {
+    align-self:center;
+    margin:10px;
+}
+.message .message_text {
+    flex: 1;
+    padding: 10px;
+    font-family: "Roboto";
+    font-size: 17px;
+}
+.message .message_date {
+    align-self:center;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 0;
+    font-size: 24px;
+}
+
+.btn_control {
+    font-size: 22px;
+    padding: 8px 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.btn_control:hover {
+    background-color: #d0d0d0;
+}
+
+.btn_control.warning {
+    color: #d30000;
+}
+
+
+
+
+.add_message_wrapper {
+    margin-top: 76px;
+    list-style: none;
+    content: "";
+    display: table;
+    clear: both;
+    border-top: 2px solid #000;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.add_message_wrapper #text_message {
+    min-height: 30px;
+    width:100%;
+}
+
+.add_message_wrapper #emoticons_store {
+    margin:10px 0;
+}
+
+.add_message_wrapper .emoticons_store .emoticon_entry {
+    display: flex;
+    align-items: center;
+}
+
+.upper_side {
+    min-height: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-family: "Raleway";
+    letter-spacing: 2px;
+    font-size: 21px;
+    align-items:center;
+}
+
+.upper_side #body {
+    min-height: 30px;
+    flex: 1;
+    margin: 0 50px 0;
+}
